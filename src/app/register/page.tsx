@@ -64,7 +64,7 @@ export default function Register() {
     <>
       <Navbar />
       <div
-        className="flex flex-col min-h-[83vh] relative"
+        className="flex flex-col min-h-[87vh] relative"
         style={{
           backgroundImage: "url('/images/products/prawns.jpeg')",
           backgroundSize: "cover",

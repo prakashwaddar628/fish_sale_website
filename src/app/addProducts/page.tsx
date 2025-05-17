@@ -71,7 +71,7 @@ export default function AddProducts() {
     <>
       <Navbar />
       <div
-        className="container mx-auto p-4 min-h-[83vh] bg-black bg-opacity-50 flex flex-col items-center justify-center"
+        className="container mx-auto p-4 min-h-[87vh] bg-black bg-opacity-50 flex flex-col items-center justify-center"
         style={{
           backgroundImage: `url('/images/products/prawns.jpeg')`,
           backgroundSize: "cover",
@@ -154,7 +154,6 @@ export default function AddProducts() {
               required
             />
             {previewURL && (
-              // eslint-disable-next-line react/jsx-key
               <Image
                 src={previewURL}
                 alt="Preview"

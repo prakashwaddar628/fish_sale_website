@@ -1,9 +1,9 @@
 export default function Footer() {
-    return (
-        <footer className="bg-gray-50 shadow-2xl px-16 py-4 sticky bottom-0 flex justify-between items-center">
-            <div className="text-2xl font-bold text-blue-600">
-                &copy; 2023 SeaFood
-            </div>
-        </footer>
-    )
+  return (
+    <footer className="bg-gray-100 py-2 text-center sticky bottom-0 text-gray-500">
+      <p className="text-sm">
+        &copy; {new Date().getFullYear()} SeaFood. All rights reserved.
+      </p>
+    </footer>
+  );
 }

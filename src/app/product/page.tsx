@@ -50,7 +50,7 @@ export default function Products() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {products.map((product) => (
-                  <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
+                  <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col" key={product._id}>
                     {product.image ? (
                       // eslint-disable-next-line react/jsx-key
                       <Image

@@ -51,7 +51,6 @@ export default function Products() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {products.map((product) => (
-                <Link key={product._id} href={`/product/${product._id}`}>
                   <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
                     {product.image ? (
                       // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
@@ -70,8 +69,10 @@ export default function Products() {
                       {product.description}
                     </p>
                     <p className="text-lg font-bold mt-2">₹{product.price}/kg</p>
+                    <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+                      add to cart
+                    </button>
                   </div>
-                </Link>
               ))}
             </div>
           )}

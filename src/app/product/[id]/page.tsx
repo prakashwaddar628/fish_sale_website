@@ -21,12 +21,11 @@ const productList = [
   },
 ];
 
-// ✅ Fix: Correct typing for App Router's `params` prop
-export default function ProductDetails({
-  params,
-}: {
+type ProductPageProps = {
   params: { id: string };
-}) {
+};
+
+export default async function ProductDetails({ params }: ProductPageProps) {
   const productId = parseInt(params.id);
   const product = productList.find((p) => p.id === productId);
 
@@ -49,9 +48,7 @@ export default function ProductDetails({
           <div>
             <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
             <p className="text-gray-700 mb-4">{product.description}</p>
-            <p className="text-2xl font-semibold text-blue-600 mb-6">
-              {product.price}
-            </p>
+            <p className="text-2xl font-semibold text-blue-600 mb-6">{product.price}</p>
             <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
               Add to Cart
             </button>

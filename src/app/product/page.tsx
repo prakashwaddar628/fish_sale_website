@@ -54,8 +54,8 @@ export default function Products() {
                 <Link key={product._id} href={`/product/${product._id}`}>
                   <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
                     {product.image ? (
-                      // Use standard <img> tag because next/image doesn't work well with base64 data URLs
-                      <img
+                      // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
+                      <Image
                         src={product.image}
                         alt={product.name}
                         width={250}

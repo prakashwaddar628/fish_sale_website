@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import { useState, useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -153,7 +154,7 @@ export default function AddProducts() {
               required
             />
             {previewURL && (
-              <img
+              <Image
                 src={previewURL}
                 alt="Preview"
                 className="mt-4 rounded shadow w-32 h-32 object-cover"

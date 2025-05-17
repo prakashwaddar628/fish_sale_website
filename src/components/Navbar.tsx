@@ -1,14 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
-import { FaHeart } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 
 export default function Navbar() {
-  const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -21,7 +18,7 @@ export default function Navbar() {
     <nav className="bg-gray-50 px-16 py-4 shadow-2xl sticky flex justify-between items-center top-0 z-50">
       {/* Logo / Brand */}
       <div className="text-2xl font-bold text-blue-600">
-        <Link href="/">SeaFood</Link>
+        <Link href="/">SeaFood HUB</Link>
       </div>
 
       {/* Navigation Links */}

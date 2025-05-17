@@ -42,9 +42,9 @@ export default function Login() {
         localStorage.setItem("user", JSON.stringify(data.user));
         router.push("/");
       }, 1000);
-    } catch (err: any) {
-      setError(err.message || "Login failed. Please try again.");
-      toast.error(err.message || "Login failed. Please try again.");
+    } catch {
+      setError("Login failed. Please try again.");
+      toast.error("Login failed. Please try again.");
     } finally {
       setLoading(false);
     }

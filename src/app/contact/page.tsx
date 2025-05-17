@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
             <p className="text-lg mb-8">
-              Have questions, feedback, or want to reach out? We're here to
+              Have questions, feedback, or want to reach out? We&apos;re here to
               help. Contact us using the form below or reach us via email or
               phone.
             </p>
@@ -22,7 +22,7 @@ export default function Contact() {
                 <strong>Email:</strong> fishstore@example.com
               </p>
               <p>
-                <strong>Phone:</strong> +91 98765 43210
+                <strong>Phone:</strong> +91 123-456-7890
               </p>
               <p>
                 <strong>Location:</strong> Karwar, Karnataka, India

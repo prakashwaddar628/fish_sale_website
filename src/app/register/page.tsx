@@ -52,9 +52,9 @@ export default function Register() {
         localStorage.setItem("user", JSON.stringify(resData.user));
         router.push("/login");
       }, 1000);
-    } catch (error: any) {
-      setError(error.message || "Something went wrong");
-      toast.error(error.message || "Something went wrong");
+    } catch {
+      setError("Something went wrong");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }

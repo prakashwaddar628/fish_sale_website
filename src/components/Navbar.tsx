@@ -1,18 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaHeart } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 
 export default function Navbar() {
+  const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // You can replace this logic with proper auth state (e.g., from cookies/context)
-    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
-    setIsLoggedIn(loggedIn);
+    // Check if the user is logged in by checking local storage or a cookie
+    const token = localStorage.getItem("user");
+    setIsLoggedIn(!!token);
   }, []);
 
   return (
@@ -40,14 +42,10 @@ export default function Navbar() {
 
       {/* Icons */}
       <ul className="flex space-x-6 text-2xl">
+        
         <li>
-          <Link href="/favorate">
-            <FaHeart className="text-red-500 hover:scale-110 transition" />
-          </Link>
-        </li>
-        <li>
-          <Link href="/cart">
-            <IoCart className="text-blue-500 hover:scale-110 transition" />
+          <Link href={isLoggedIn ? "/cart" : "/login"}>
+            <IoCart className="text-blue-500 hover:scale-110 transition cursor-pointer" />
           </Link>
         </li>
         <li>

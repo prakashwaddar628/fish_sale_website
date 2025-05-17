@@ -154,9 +154,12 @@ export default function AddProducts() {
               required
             />
             {previewURL && (
+              // eslint-disable-next-line react/jsx-key
               <Image
                 src={previewURL}
                 alt="Preview"
+                width={128}
+                height={128}
                 className="mt-4 rounded shadow w-32 h-32 object-cover"
               />
             )}

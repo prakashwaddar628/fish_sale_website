@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Register() {
   const router = useRouter();
@@ -159,6 +159,7 @@ export default function Register() {
             </form>
           </div>
         </main>
+        <ToastContainer />
       </div>
       <Footer />
     </>

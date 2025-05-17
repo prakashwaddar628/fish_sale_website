@@ -23,7 +23,7 @@ export default function Cart() {
           <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-md w-full max-w-md text-center">
             <h1 className="text-3xl font-bold mb-4">Your Cart</h1>
             <p className="text-gray-600 mb-6">Your cart is currently empty.</p>
-            <Link href="/products">
+            <Link href="/product">
               <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                 Go to Products
               </button>

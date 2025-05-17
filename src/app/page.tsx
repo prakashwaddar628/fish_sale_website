@@ -18,7 +18,7 @@ export default function Home() {
       >
         <div className="bg-opacity-50 rounded-xl text-center mr-[780px] mt-[280px]">
 
-          <Link href="/products">
+          <Link href="/product">
             <button className="bg-blue-600 hover:bg-blue-700 py-3 px-18 text-xl text-white rounded-full transition">
               Order Now
             </button>

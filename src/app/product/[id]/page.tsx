@@ -19,20 +19,6 @@ const productList = [
     price: "₹450/kg",
     description: "High-quality prawns, cleaned and ready to cook.",
   },
-  {
-    id: 3,
-    name: "Bangdo Fish",
-    image: "/images/products/bangdo.jpeg",
-    price: "₹300/kg",
-    description: "Fresh Bangdo fish from the local fishery.",
-  },
-  {
-    id: 4,
-    name: "Prawns",
-    image: "/images/products/prawns.jpeg",
-    price: "₹450/kg",
-    description: "High-quality prawns, cleaned and ready to cook.",
-  },
 ];
 
 export default function ProductDetails({ params }: { params: { id: string } }) {

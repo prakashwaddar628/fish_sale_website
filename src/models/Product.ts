@@ -1,14 +1,23 @@
-// models/Products.ts
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema(
   {
-    name: String,
-    price: Number,
-    description: String,
-    image: String,
-    category: String,
-    stock: Number,
+    name: {
+      type: String,
+      trim: true,
+    },
+    price: {
+      type: Number,
+      min: 0,
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    image: {
+      data: Buffer,
+      contentType: String,
+    },
   },
   { timestamps: true }
 );

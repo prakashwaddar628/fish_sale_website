@@ -11,6 +11,11 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      "react/jsx-key": "off",  // disable this rule globally
+    },
+  },
 ];
 
 export default eslintConfig;

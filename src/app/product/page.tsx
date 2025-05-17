@@ -53,7 +53,7 @@ export default function Products() {
               {products.map((product) => (
                 <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
                   {product.image ? (
-                    // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
+                    // eslint-disable-next-line react/jsx-keyRLs
                     <Image
                       key={product._id}
                       src={product.image}

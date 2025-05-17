@@ -1,5 +1,5 @@
 //app/product/page.tsx
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
@@ -37,7 +37,8 @@ export default function Products() {
     fetchProducts();
   }, []);
 
-  if (loading) return <div className="text-center py-20">Loading products...</div>;
+  if (loading)
+    return <div className="text-center py-20">Loading products...</div>;
 
   return (
     <>
@@ -50,28 +51,30 @@ export default function Products() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {products.map((product) => (
-                  <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
-                    {product.image ? (
-                      // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        width={250}
-                        height={200}
-                        className="mx-auto rounded-lg mb-4 flex-shrink-0 object-cover"
-                      />
-                    ) : (
-                      <div className="w-[250px] h-[200px] bg-gray-200 mx-auto rounded-lg mb-4 flex-shrink-0" />
-                    )}
-                    <h2 className="text-xl font-semibold">{product.name}</h2>
-                    <p className="text-gray-600 flex-grow overflow-hidden line-clamp-3">
-                      {product.description}
-                    </p>
-                    <p className="text-lg font-bold mt-2">₹{product.price}/kg</p>
-                    <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
-                      add to cart
-                    </button>
-                  </div>
+                <div className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition cursor-pointer h-[350px] flex flex-col">
+                  {product.image ? (
+                    // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={250}
+                      height={200}
+                      className="mx-auto rounded-lg mb-4 flex-shrink-0 object-cover"
+                      priority // optional: preload image
+                      quality={80} // optional: adjust image quality
+                    />
+                  ) : (
+                    <div className="w-[250px] h-[200px] bg-gray-200 mx-auto rounded-lg mb-4 flex-shrink-0" />
+                  )}
+                  <h2 className="text-xl font-semibold">{product.name}</h2>
+                  <p className="text-gray-600 flex-grow overflow-hidden line-clamp-3">
+                    {product.description}
+                  </p>
+                  <p className="text-lg font-bold mt-2">₹{product.price}/kg</p>
+                  <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
+                    add to cart
+                  </button>
+                </div>
               ))}
             </div>
           )}

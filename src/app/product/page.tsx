@@ -55,6 +55,7 @@ export default function Products() {
                   {product.image ? (
                     // Use standard <Image> tag because next/image doesn't work well with base64 data URLs
                     <Image
+                      key={product._id}
                       src={product.image}
                       alt={product.name}
                       width={250}
